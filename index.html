@@ -1,58 +1,230 @@
 <!DOCTYPE html>
-<ht<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>network.nalo</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nalo Designs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>network.nalo</h1>
-        <p>A network where nature always lives on...</p>
+<body class="bg-green-100">
+    <header class="bg-green-600 text-white py-4 flex justify-between items-center shadow-md sticky top-0 z-10 rounded-md">
+        <div class="logo text-xl font-bold ml-4">
+            Nalo Designs
+        </div>
+        <button id="hamburger-btn" class="mr-4 focus:outline-none" aria-label="Toggle Navigation">
+            <div class="hamburger-icon">
+                <div class="bar w-6 h-1 bg-white rounded-full mb-1"></div>
+                <div class="bar w-6 h-1 bg-white rounded-full mb-1"></div>
+                <div class="bar w-6 h-1 bg-white rounded-full"></div>
+            </div>
+        </button>
+        <nav id="nav-menu" class="hidden fixed top-0 right-0 h-full w-64 bg-green-600 shadow-lg z-20">
+            <div class="nav-menu-header p-4 flex justify-end">
+                <button id="close-menu-btn" class="focus:outline-none" aria-label="Close Navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="nav-menu-list p-4">
+                <li class="mb-4"><a href="#about" class="block text-lg text-white hover:text-green-200 no-underline">About</a></li>
+                <li class="mb-4"><a href="#services" class="block text-lg text-white hover:text-green-200 no-underline">Services</a></li>
+                <li class="mb-4"><a href="#principles" class="block text-lg text-white hover:text-green-200 no-underline">Principles</a></li>
+                <li><a href="#contact" class="block text-lg text-white hover:text-green-200 no-underline">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <section id="welcome">
-        <h2>Welcome</h2>
-        <p>Welcome users and thank you for being you!</p>
-        <p>"The nalo network is a place where humans, animals, insects, reptiles, fish, and all other living and non-living things that encompass this planet earth will be shared, stored, cared about, and interacted with!"</p>
+
+    <section class="hero bg-green-100 text-gray-800 text-center py-20 px-4 rounded-md">
+        <h1 class="text-3xl font-semibold mb-4">Design a Regenerative Future</h1>
+        <p class="text-lg mb-8">
+            We help you create beautiful, functional, and regenerative spaces using permaculture principles.
+        </p>
+        <button onclick="window.location.href='#contact'" class="bg-green-500 text-white py-3 px-6 rounded-full hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+            Get Started
+        </button>
     </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>On the nalo network, we desire to incentivize all aspects of the "earthcare," "people care," and "fairshare" movements that are the foundational ethics of Permaculture. We do this to ensure that nature always lives on!</p>
+    <section id="about" class="section bg-white py-16 px-4 text-gray-700 text-center rounded-md">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold mb-8 text-green-600">About Us</h2>
+            <p class="text-lg">
+                At Nalo Designs, we are passionate about creating sustainable and regenerative landscapes.  We believe that permaculture offers a practical and ethical framework for designing systems that meet human needs while enhancing the health of our planet.
+            </p>
+            <p class="text-lg mt-4">
+                <strong>Nalo</strong> stands for "<strong>N</strong>ature <strong>A</strong>lways <strong>L</strong>ives <strong>O</strong>n," reflecting our core belief in the resilience and enduring power of nature.
+            </p>
+             <p class="text-lg mt-4">
+                We are also building the <strong>Nalo Network</strong>, a collection of "living libraries" - diverse yet interconnected places and communities dedicated to regenerative living.
+            </p>
+            <p class="text-lg mt-4">
+                Our team combines expertise in permaculture principles, ecological design, and sustainable living to provide you with tailored solutions for your home, farm, or community.
+            </p>
+        </div>
     </section>
 
-    <section id="features">
-        <h2>Our Vision</h2>
-        <p>Through the connection of humans to their inherent gifts that they wish to offer/share, we will build a network of landsites we call "living libraries."</p>
-        <p>"Through the sharing of our gifts, we will create the abundance that is inherent in a balanced, naturally occurring organism."</p>
+    <section id="services" class="section bg-green-100 py-16 px-4 text-gray-700 text-center rounded-md">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold mb-8 text-green-600">Our Services & Costs</h2>
+            <p class="text-lg text-center mb-8">
+                We offer a range of services to meet your permaculture design needs.  Our pricing is flexible to accommodate different project scales and client relationships. We are open to discussing reduced costs for projects that align with our long-term vision of creating regenerative landscapes, including those that involve a deeper, ongoing relationship and/or partial ownership models.
+            </p>
+            <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Consultation</h3>
+                    <p class="text-md mb-4">
+                        Initial site visit and consultation to discuss your goals and assess your property.
+                    </p>
+                    <ul class="list-disc list-inside mb-4">
+                        <li><strong>Base Price:</strong> $100 - $500 (depending on property size)</li>
+                        <li><strong>Long-Term Partnership:</strong> 10-20% discount</li>
+                        <li><strong>Partial Ownership:</strong> Contact us to discuss options</li>
+                    </ul>
+                    <button onclick="window.location.href='#contact'" class="bg-green-400 text-white py-2 px-4 rounded-full hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-opacity-75">Learn More</button>
+                </div>
+                <div class="service-card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Design</h3>
+                    <p class="text-md mb-4">
+                        Detailed permaculture design plan, including zone mapping, plant selection, and system recommendations.
+                    </p>
+                    <ul class="list-disc list-inside mb-4">
+                        <li><strong>Base Price:</strong> $1,000 - $5,000 (depending on design complexity and property size)</li>
+                        <li><strong>Long-Term Partnership:</strong> 15-25% discount</li>
+                         <li><strong>Partial Ownership:</strong> Contact us to discuss options</li>
+                    </ul>
+                    <button onclick="window.location.href='#contact'" class="bg-green-400 text-white py-2 px-4 rounded-full hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-opacity-75">Learn More</button>
+                </div>
+                <div class="service-card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Implementation Support</h3>
+                    <p class="text-md mb-4">
+                       Guidance and support during the implementation phase.
+                    </p>
+                    <ul class="list-disc list-inside mb-4">
+                        <li><strong>Base Price:</strong> $500 - $2,000 (depending on project scope)</li>
+                        <li><strong>Long-Term Partnership:</strong> 10-20% discount</li>
+                         <li><strong>Partial Ownership:</strong> Contact us to discuss options</li>
+                    </ul>
+                    <button onclick="window.location.href='#contact'" class="bg-green-400 text-white py-2 px-4 rounded-full hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-opacity-75">Learn More</button>
+                </div>
+                <div class="service-card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Ongoing Care</h3>
+                    <p class="text-md mb-4">
+                        Long-term maintenance and support to ensure the health and productivity of your permaculture system.
+                    </p>
+                    <ul class="list-disc list-inside mb-4">
+                        <li><strong>Base Price:</strong> Varies depending on the specific needs of the site.</li>
+                        <li><strong>Long-Term Partnership:</strong> Included or discounted rate.</li>
+                        <li><strong>Partial Ownership:</strong> Included or significantly discounted. We prioritize these relationships.</li>
+                    </ul>
+                    <button onclick="window.location.href='#contact'" class="bg-green-400 text-white py-2 px-4 rounded-full hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-opacity-75">Learn More</button>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 nalo.network</p>
-        <p>"The best person for the job is the person that most desires to do that said job." -???-</p>
+    <section id="principles" class="section bg-white py-16 px-4 text-gray-700 text-center rounded-md">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold mb-8 text-green-600">Our Permaculture Principles</h2>
+            <div class="principle-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="principle-card bg-green-100 rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Observe & Interact</h3>
+                    <p class="text-md">Careful observation of natural patterns informs our designs.</p>
+                </div>
+                <div class="principle-card bg-green-100 rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Catch & Store Energy</h3>
+                    <p class="text-md">We design systems to capture and store resources like water and sunlight.</p>
+                </div>
+                <div class="principle-card bg-green-100 rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Obtain a Yield</h3>
+                    <p class="text-md">Ensuring that our systems produce useful resources.</p>
+                </div>
+                <div class="principle-card bg-green-100 rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Apply Self-Regulation & Accept Feedback</h3>
+                    <p class="text-md">Using feedback to adjust our designs and promote self-regulating systems.</p>
+                </div>
+                <div class="principle-card bg-green-100 rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Use & Value Renewable Resources</h3>
+                    <p class="text-md">Prioritizing the use of renewable resources to create sustainable systems.</p>
+                </div>
+                <div class="principle-card bg-green-100 rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Produce No Waste</h3>
+                    <p class="text-md">Minimizing waste and making the most of all resources.</p>
+                </div>
+                <div class="principle-card bg-green-100 rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Design From Patterns to Details</h3>
+                    <p class="text-md">Observing patterns in nature to inform design at all scales.</p>
+                </div>
+                <div class="principle-card bg-green-100 rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Integrate Rather Than Segregate</h3>
+                    <p class="text-md">Creating interconnected systems that work together.</p>
+                </div>
+                <div class="principle-card bg-green-100 rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Use Small & Slow Solutions</h3>
+                    <p class="text-md">Prioritizing small-scale, manageable solutions for long-term sustainability.</p>
+                </div>
+                <div class="principle-card bg-green-100 rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Use & Value Diversity</h3>
+                    <p class="text-md">Recognizing the importance of diversity in creating resilient systems.</p>
+                </div>
+                <div class="principle-card bg-green-100 rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Use Edges & Value the Marginal</h3>
+                    <p class="text-md">Utilizing edge effects and valuing often overlooked areas.</p>
+                </div>
+                <div class="principle-card bg-green-100 rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4 text-green-500">Creatively Use & Respond to Change</h3>
+                    <p class="text-md">Adapting to change and using it to our advantage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-green-100 py-16 px-4 text-gray-700 text-center rounded-md">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold mb-8 text-green-600">Contact Us</h2>
+            <p class="text-lg mb-4">
+                Ready to start your permaculture journey?  Get in touch with us today for a consultation.
+            </p>
+            <p class="text-lg mb-8">
+                Email: info@nalodesigns.com<br>
+                Phone: +123 456 7890
+            </p>
+            <button onclick="alert('Thank you for your interest! We will contact you soon.')" class="bg-green-500 text-white py-3 px-6 rounded-full hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+                Contact Us
+            </button>
+        </div>
+    </section>
+
+    <footer class="bg-green-600 text-white py-4 text-center rounded-md">
+        <p>© 2023 Nalo Designs. All rights reserved.</p>
     </footer>
-</body>
-</html>
-ml lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <main>
-        <p>This is the main content of the website.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
-    <script src="script.js"></script>
+
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const navMenu = document.getElementById("nav-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const navLinks = navMenu.querySelectorAll("a");
+
+        function toggleNavMenu() {
+            navMenu.classList.toggle("hidden");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleNavMenu);
+        closeMenuBtn.addEventListener("click", toggleNavMenu);
+        navLinks.forEach(link => {
+            link.addEventListener("click", toggleNavMenu);
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!navMenu.classList.contains("hidden") && !navMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleNavMenu();
+            }
+        });
+    </script>
 </body>
 </html>
